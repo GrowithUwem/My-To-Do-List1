@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI To-Do List</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>To-Do List</h1>
+    <p class="subtitle">Add tasks, or let AI break a big task into smaller steps.</p>
+
+    <form id="add-form" class="row">
+      <input type="text" id="task-input" placeholder="Add a task..." autocomplete="off" required />
+      <button type="submit">Add</button>
+    </form>
+
+    <form id="ai-form" class="row">
+      <input type="text" id="ai-input" placeholder="Describe a big task for AI to break down..." autocomplete="off" required />
+      <button type="submit" id="ai-button">Break it down</button>
+    </form>
+    <p id="ai-status" class="status"></p>
+
+    <div id="ai-results" class="ai-results hidden">
+      <p class="ai-results-label">Suggested subtasks — click "Add all" or add one at a time:</p>
+      <ul id="ai-suggestions"></ul>
+      <button id="add-all-btn" type="button">Add all</button>
+    </div>
+
+    <ul id="task-list" class="task-list"></ul>
+
+    <p id="empty-state" class="empty-state">No tasks yet. Add one above.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
